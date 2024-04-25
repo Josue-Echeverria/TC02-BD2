@@ -30,7 +30,7 @@ services:
       timeout: 10s
       retries: 3
 
-  mongodb:
+  mongo:
     image: mongo:latest
     networks:
       - app-tier
