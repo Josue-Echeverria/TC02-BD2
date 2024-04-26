@@ -21,7 +21,7 @@ Para utilizar la aplicación:
 2. Clona este repositorio en tu máquina local.
 3. Configura las variables de entorno necesarias para Kafka y MongoDB en el archivo `docker-compose.yml` y en los módulos de Python según sea necesario.
 4. Ejecuta `docker-compose up --build` para iniciar los contenedores de Kafka, MongoDB y la aplicación.
-5. Ejecuta `python app.py` en otra terminal para interactuar con la aplicación de chat.
+5. Ejecuta `python3 client.py` en otra terminal para interactuar con la aplicación de chat.
 
 ## Arquitectura del Sistema y Decisiones de Diseño
 
