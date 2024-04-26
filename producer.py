@@ -1,5 +1,7 @@
 from kafka import KafkaProducer
 import time
+from db_mongo import MongoDB
+
 
 def delivery_report(err, msg):
     if err:
@@ -10,6 +12,9 @@ def producer(client_name, broker1, topic): #broker2, broker3,
     while True:
         data = input(client_name + " : ")
         send_data(client_name, broker1, topic, "\n"+client_name + " : " + data)
+        #enviar datos a mongodb 
+        data_mongo = MongoDB().add_message(topic, client_name, data)
+        print(data_mongo)
         time.sleep(2) 
 
 def send_data(client_name, broker1, Itopic, msg):
