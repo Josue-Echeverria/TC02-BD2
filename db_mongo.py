@@ -82,20 +82,3 @@ class MongoDB:
             return messages["messages"]
         else:
             return []
-
-mongo = MongoDB()
-
-result = mongo.add_channel("general")
-print(result)
-
-result = mongo.add_message("general", "Juan", "Mensaje de Prueba")
-print(result)
-
-print("Lista de canales:")
-channels = mongo.list_channels()
-print(channels)
-
-print("Mensajes para el canal 'general':")
-messages = mongo.get_messages_by_channel("general")
-for message in messages:
-    print(message)

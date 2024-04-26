@@ -1,4 +1,4 @@
-version: '2.1'
+version: '3'
 
 services:
 
@@ -11,7 +11,8 @@ services:
         condition: service_healthy
         restart: true
     restart: on-failure
-    command: python3 test_client.py
+    command: python app.py
+ 
 
   kafka:
     image: 'bitnami/kafka:latest'
